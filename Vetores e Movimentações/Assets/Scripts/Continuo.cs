@@ -18,7 +18,10 @@ public class Continuo : MonoBehaviour
     private void Update()
     {
         agent.SetDestination(points[index]);
-        index++;
+        if(transform.position == points[index])
+        {
+            index++;
+        }
 
         if (index >= points.Count)
         {
